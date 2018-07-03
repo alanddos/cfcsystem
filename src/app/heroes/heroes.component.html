@@ -7,3 +7,24 @@
     <input [(ngModel)]="hero.name" placeholder="name">
   </label>
 </div>
+Aqui começa a listagem importando de uma classe
+
+<h2>My Heroes</h2>
+<ul class="heroes">
+
+  <li *ngFor="let her of hers " (click)="onSelect(her)"> <!-- Aqui faz um foreach simplificado -->
+      <span class="badge">{{her.id}}</span> {{her.name}}
+
+  </li>
+</ul>
+
+Aqui começa os detalhes da lista
+
+<!-- <div *ngIf="selectedHero">usa ngIF se precisar começar com undefined -->
+<h2>{{selectedHer.name | uppercase}} Details</h2>
+<div><span>id: </span>{{selectedHer.id}}</div>
+<div>
+  <label>name:
+    <input [(ngModel)]="selectedHer.name" placeholder="Name of champ">
+  </label>
+</div>

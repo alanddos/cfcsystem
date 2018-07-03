@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero } from '../hero';
+import { HER } from '../mock-heroes';
 
 @Component({
 selector: 'app-heroes',
@@ -15,9 +16,22 @@ heroes = ['Heróis que estão em array do component ts', 'Explosão de fogo','Te
     name: 'Windstorm'
   };
 
+hers = HER;
+selectedHer = HER;
+
+ selectedHer: Her;
+
+
+onSelect(her: Her): void {
+  this.selectedHer = her;
+}
+
 constructor() { }
 
 ngOnInit() {
-}
+/*console.log(this.her)*/
+     }
+
+
 
 }
