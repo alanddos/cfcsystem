@@ -1,0 +1,9 @@
+<h2>{{heroes}}</h2><!-- aqui  acessa o array-->
+<h2>{{hero.name}} Details</h2><!-- aqui  acessa a classe 'hero' com os dados-->
+<div><span>id: </span>{{hero['id']}}</div> 
+<div><span>name: </span>{{hero.name}}</div>
+<div>
+  <label>name:
+    <input [(ngModel)]="hero.name" placeholder="name">
+  </label>
+</div>
